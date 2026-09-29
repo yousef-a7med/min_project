@@ -26,8 +26,10 @@ namespace ConsoleApp4
             this.statue = statue;
             this.category = category;
             this.Price = price;
+            vehicles_list.Add(this);
         }
 
+        public static List<Vehicles> vehicles_list = new List<Vehicles>();
         public int Vehicle_ID { get; set; }
         public string Brand { get; set; }
         public string License_plate { get; set; }

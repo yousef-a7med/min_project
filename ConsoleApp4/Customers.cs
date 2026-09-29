@@ -13,15 +13,22 @@ namespace ConsoleApp4
     }
     internal class Customers
     {
-        public Customers(int iD, string name, string phone_Num, customerType customer_Type, string license_Num)
+        
+
+        public Customers( int iD, string name, string phone_Num, customerType customer_Type, string license_Num)
         {
-            this.ID = iD;
-            this.Name = name;
-            this.Phone_Num = phone_Num;
-            this.Customer_Type = customer_Type;
-            this.License_Num = license_Num;
+            
+            ID = iD;
+            Name = name;
+            Phone_Num = phone_Num;
+            Customer_Type = customer_Type;
+            License_Num = license_Num;
+            custumer_list.Add(this);
         }
 
+        
+
+        public static List<Customers> custumer_list = new List<Customers>();
         public int ID { get; set; }
         public string Name { get; set; }
         public string Phone_Num { get; set; }
