@@ -6,7 +6,9 @@ internal class Program
 {
     private static void Main(string[] args)
     {
-        
+        while(true)
+        {
+
         Console.WriteLine( "Enter Customer ID");
         int id = int.Parse(Console.ReadLine());
 
@@ -46,10 +48,19 @@ internal class Program
         }
 
         Console.WriteLine("Enter Customer License_Num");
-        string license_num = Console.ReadLine();
+            string license_num = Console.ReadLine();
 
-        Customers c1 = new Customers(id, name, Phone_num, customer_type, license_num);
-        Customers c2 = new Customers(id, name, Phone_num, customer_type, license_num);
+            Customers c1 = new Customers(id, name, Phone_num, customer_type, license_num);
+
+            Console.WriteLine(" If you want to add another customer Press + ");
+            string choice = Console.ReadLine();
+
+            if (choice != "+")
+                break;
+        }
+
+       
+        
         Console.Clear();
 
         Console.WriteLine("To Print The List Of Customer Press 1");
@@ -66,6 +77,9 @@ internal class Program
             Console.Clear();
 
         //==========================================================================================
+
+        while(true)
+        {
 
         Console.WriteLine("Enter  Vehicle_ID");
         int vehicle_id = int.Parse(Console.ReadLine());
@@ -129,7 +143,12 @@ internal class Program
 
         Vehicles v1 = new Vehicles(vehicle_id, brand, license_plate, statue, category, price);
         Console.Clear();
+        Console.WriteLine(" If you want to add another customer Press + ");
+        string choice = Console.ReadLine();
 
+            if (choice != "+")
+                break;
+}
         Console.WriteLine("To Print The List Of Vehicle Press 1");
         int x2 = int.Parse(Console.ReadLine());
         if (x2 == 1)
